@@ -27,12 +27,13 @@ https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md
 
 Read the above doc to enable babel macros. If you are using create-react-app, babel macros are enabled by default so you should be able to import this macro without configuring anything.
 
-YOu can use the following tagged template macros:
-
+Yuu can use the following tagged template macros:
+```
 fal -> light
 fas -> solid
 fab -> brands
 fad -> duotone (pro only)
+```
 
 You can specify free or pro in the babel plugin macro config.
 The below config enables use of pro icons(by default this macro uses free icons).

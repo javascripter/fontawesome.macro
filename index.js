@@ -3,7 +3,7 @@ const { createMacro } = require('babel-plugin-macros')
 const { addNamed } = require('@babel/helper-module-imports')
 
 module.exports = createMacro(fontAwesomeMacro, {
-  configName: 'fontawesome'
+  configName: 'fontawesome.macro'
 })
 
 function capitalize(str) {

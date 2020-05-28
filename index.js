@@ -40,28 +40,40 @@ function replaceWithImportedIcon(
           )
         }
         if (quasi.quasis[0].type === 'TemplateElement') {
-          const iconName = quasi.quasis[0].value.cooked
-
-          const name = `fa${capitalize(camelCase(iconName))}`
-          const alias = `${prefix}${capitalize(camelCase(iconName))}`
-
-          if (!(name in require(importFrom))) {
-            throw parentPath.buildCodeFrameError(
-              `No icon named ${name} is found in ${JSON.stringify(
-                importFrom
-              )}. Maybe you misspelled it?`
-            )
-          }
-
-          const importName = addNamed(path, name, importFrom, {
-            nameHint: alias
-          })
-
-          parentPath.replaceWith(importName)
+          process(quasi.quasis[0].value.cooked, path)
         }
       }
+    } else if (
+      parentPath.type === 'CallExpression' &&
+      parentPath.node.callee === path.node
+    ) {
+      if (
+        parentPath.node.arguments.length !== 1 ||
+        parentPath.node.arguments[0].type !== 'StringLiteral'
+      ) {
+        throw parentPath.buildCodeFrameError(
+          'Invalid number or type of arguments.'
+        )
+      }
+      process(parentPath.node.arguments[0].value, path)
     }
   })
+
+  function process(iconName, path) {
+    const name = `fa${capitalize(camelCase(iconName))}`
+    const alias = `${prefix}${capitalize(camelCase(iconName))}`
+    if (!(name in require(importFrom))) {
+      throw path.parentPath.buildCodeFrameError(
+        `No icon named ${name} is found in ${JSON.stringify(
+          importFrom
+        )}. Maybe you misspelled it?`
+      )
+    }
+    const importName = addNamed(path, name, importFrom, {
+      nameHint: alias
+    })
+    path.parentPath.replaceWith(importName)
+  }
 }
 
 function fontAwesomeMacro({ references, state, babel, source, config }) {

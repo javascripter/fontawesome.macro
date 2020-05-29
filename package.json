@@ -1,6 +1,11 @@
 {
   "name": "fontawesome.macro",
   "version": "1.0.1",
+  "homepage": "https://github.com/javascripter/fontawesome.macro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/javascripter/fontawesome.macro.git"
+  },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {

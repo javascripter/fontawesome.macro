@@ -13,6 +13,24 @@
     "trailingComma": "none",
     "arrowParens": "avoid"
   },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/fixtures/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write"
+    ]
+  },
   "keywords": [
     "fontawesome",
     "font",
@@ -23,5 +41,14 @@
     "babel-plugin-macro",
     "babel-macros",
     "babel-plugin-macros"
-  ]
+  ],
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "babel-plugin-tester": "^9.2.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.7"
+  }
 }

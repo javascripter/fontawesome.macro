@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros can import macros for free version: can import macros for free version 1`] = `
+
+const { far, fas, fal, fab } = require('./fixtures/fontawesome5.macro.js')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+
+`;
+
+exports[`macros can mix both syntaxes: can mix both syntaxes 1`] = `
+
+const { far } = require('./fixtures/fontawesome5.macro.js')
+far('smile')
+far\`smile\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { faSmile as _farSmile2 } from '@fortawesome/free-regular-svg-icons'
+import { faSmile as _farSmile } from '@fortawesome/free-regular-svg-icons'
+_farSmile
+_farSmile2
+
+
+`;
+
+exports[`macros can use function syntax: can use function syntax 1`] = `
+
+const { far } = require('./fixtures/fontawesome5.macro.js')
+far('smile')
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { faSmile as _farSmile } from '@fortawesome/free-regular-svg-icons'
+_farSmile
+
+
+`;
+
+exports[`macros can use string template syntax: can use string template syntax 1`] = `
+
+const { far } = require('./fixtures/fontawesome5.macro.js')
+far\`smile\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { faSmile as _farSmile } from '@fortawesome/free-regular-svg-icons'
+_farSmile
+
+
+`;
+
+exports[`macros can use twice: can use twice 1`] = `
+
+const { far } = require('./fixtures/fontawesome5.macro.js')
+far\`smile\`
+far\`smile\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { faSmile as _farSmile2 } from '@fortawesome/free-regular-svg-icons'
+import { faSmile as _farSmile } from '@fortawesome/free-regular-svg-icons'
+_farSmile
+_farSmile2
+
+
+`;

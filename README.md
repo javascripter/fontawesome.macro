@@ -1,4 +1,5 @@
 # fontawesome.macro
+![Node.js CI](https://github.com/javascripter/fontawesome.macro/workflows/Node.js%20CI/badge.svg)
 
 ## Description
 This babel macro enables fontawesome icons to be imported automatically when using the following tagged template/function syntax

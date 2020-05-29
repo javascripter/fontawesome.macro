@@ -12,5 +12,16 @@
     "semi": false,
     "trailingComma": "none",
     "arrowParens": "avoid"
-  }
+  },
+  "keywords": [
+    "fontawesome",
+    "font",
+    "awesome",
+    "icon",
+    "svg",
+    "babel-plugin",
+    "babel-plugin-macro",
+    "babel-macros",
+    "babel-plugin-macros"
+  ]
 }

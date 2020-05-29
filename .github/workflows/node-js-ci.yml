@@ -2,19 +2,17 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-  steps:
-  - uses: actions/checkout@v2
-  - uses: actions/setup-node@v1
-    with:
-      node-version: '12'
-  - run: yarn install --frozen-lockfile
-  - run: yarn test
-    
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn install --frozen-lockfile
+      - run: yarn test

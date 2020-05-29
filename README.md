@@ -1,7 +1,7 @@
 # fontawesome.macro
 
 ## Description
-This babel macro enables fontawesome icons to be imported automatically when using the following tagged template syntax
+This babel macro enables fontawesome icons to be imported automatically when using the following tagged template/function syntax
 
 Before:
 
@@ -19,6 +19,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fas } from 'fontawesome.macro'
 
 <FontAwesome icon={fas`square`} />
+// or
+<FontAwesome icon={fas('square')} />
 ```
 
 ## Usage
@@ -27,7 +29,7 @@ https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md
 
 Read the above doc to enable babel macros. If you are using create-react-app, babel macros are enabled by default so you should be able to import this macro without configuring anything.
 
-Yuu can use the following tagged template macros:
+You can use the following tagged template/function macros:
 ```
 fal -> light
 fas -> solid

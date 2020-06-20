@@ -49,7 +49,7 @@
     "babel-plugin-macros"
   ],
   "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "babel-plugin-tester": "^9.2.0",

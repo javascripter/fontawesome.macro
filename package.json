@@ -54,7 +54,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "babel-plugin-tester": "^9.2.0",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.2.1",
     "lint-staged": "^10.2.11"
   }
 }

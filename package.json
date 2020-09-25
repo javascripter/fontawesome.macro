@@ -1,6 +1,6 @@
 {
   "name": "fontawesome.macro",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "homepage": "https://github.com/javascripter/fontawesome.macro",
   "description": "Import fontawesome icons automatically with fas('smile') or fas`smile` using this babel macro",
   "repository": {

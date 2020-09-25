@@ -46,22 +46,6 @@ pluginTester({
         far('smile')
         far\`smile\`
       `
-    },
-    {
-      title: 'throws error if icon name does not exist',
-      error: true,
-      code: `
-        const { far } = require('./fixtures/fontawesome5.macro.js)
-        far('this-is-non-existent')
-      `
-    },
-    {
-      title: 'throws error if a non-constant value is specified',
-      error: true,
-      code: `
-        const { far } = require('./fixtures/fontawesome5.macro.js)
-        far(Math.random())
-      `
     }
   ]
 })

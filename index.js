@@ -62,13 +62,6 @@ function replaceWithImportedIcon(
   function process(iconName, path) {
     const name = `fa${capitalize(camelCase(iconName))}`
     const alias = `${prefix}${capitalize(camelCase(iconName))}`
-    if (!(name in require(importFrom))) {
-      throw path.parentPath.buildCodeFrameError(
-        `No icon named ${name} is found in ${JSON.stringify(
-          importFrom
-        )}. Maybe you misspelled it?`
-      )
-    }
     const importName = addNamed(path, name, importFrom, {
       nameHint: alias
     })

@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/helper-module-imports": "^7.10.4",
-    "babel-plugin-macros": "^2.8.0"
+    "babel-plugin-macros": "^3.0.0"
   },
   "prettier": {
     "singleQuote": true,

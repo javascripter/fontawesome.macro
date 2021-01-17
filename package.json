@@ -52,7 +52,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "babel-plugin-tester": "^9.2.0",
+    "babel-plugin-tester": "^10.0.0",
     "husky": "^4.2.5",
     "jest": "^26.2.1",
     "lint-staged": "^10.2.11"

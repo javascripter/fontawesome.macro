@@ -51,7 +51,7 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "babel-plugin-tester": "^9.2.0",
     "husky": "^4.2.5",
     "jest": "^26.2.1",

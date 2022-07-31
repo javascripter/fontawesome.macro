@@ -12,14 +12,13 @@ function capitalize(str) {
 
 function camelCase(str) {
   return str
+    .toLowerCase()
     .split('-')
-    .map((s, index) => {
-      return (
-        (index === 0 ? s[0].toLowerCase() : s[0].toUpperCase()) +
-        s.slice(1).toLowerCase()
-      )
-    })
-    .join('')
+    .map(
+      (s, index) =>
+        (index === 0 ? s[0].toLowerCase() : s[0].toUpperCase()) + s.slice(1)
+    )
+    .join('');
 }
 
 function replaceWithImportedIcon(
